@@ -20,7 +20,7 @@ const useBookSearch = ( query, pageNumber ) => {
 
     axios({
       method: 'GET',
-      url: 'http://openlibrary.org/search.json',
+      url: 'https://openlibrary.org/search.json',
       params: { q: query, page: pageNumber },
       cancelToken: new axios.CancelToken( token => cancel = token )
     }).then( res => {

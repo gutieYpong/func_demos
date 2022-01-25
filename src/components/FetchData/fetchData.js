@@ -39,7 +39,7 @@ const FetchData = () => {
     <MainSectionContainer>
       <Form
         onSubmit={ event => {
-          setUrl(`http://hn.algolia.com/api/v1/search?query=${query}`);
+          setUrl(`https://hn.algolia.com/api/v1/search?query=${query}`);
           event.preventDefault();
         }}
       >

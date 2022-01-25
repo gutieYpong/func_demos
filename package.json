@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "mini-css-extract-plugin": "2.4.5",
     "react-app-rewired": "^2.1.11",
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",
