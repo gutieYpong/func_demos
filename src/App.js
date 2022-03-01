@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
+import Drowdown from "./components/Dropdown";
 import InfiniteScroll from "./components/InfiniteScroll/infiniteScroll";
 import FetchData from "./components/FetchData/fetchData";
 import FetchDataHook from "./components/FetchData/fetchData(Hook)";
@@ -24,7 +25,7 @@ const Container = styled.div`
   grid-template-rows: 40vh 10vh 60vh 10vh;
   grid-row-gap: 16px;
   place-items: start center;
-  padding: 32px;
+  padding: 10vh 32px 0 32px;
 
   background-color: #C4A8E3;
 `;
@@ -79,6 +80,7 @@ const Footer = styled.div`
 const App = () => {
   return (
     <Container>
+      <Drowdown />
       <Cover>
         <div>
           <img src={ process.env.PUBLIC_URL + `IU_tuned_croped.png` } alt="cover" />
