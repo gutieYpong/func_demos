@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react'
-
-import { IntervalContainer } from './layouts/intervalContainer';
+import { useEffect, useState, useRef } from 'react'
+import { Container, Heading } from '@chakra-ui/react';
 
 
 const AdvancedInterval = () => {
@@ -19,16 +18,21 @@ const AdvancedInterval = () => {
   useEffect(() => {
     if ( count === 0 )
     {
-      clearInterval( timer.current ); // 這裡可以成功清除定時器
+      clearInterval( timer.current );  // 這裡可以成功清除定時器
       return;
     }
   }, [count] )
 
   return (
-    <IntervalContainer>
-      <h5>Advance Interval</h5>
-      <span>{ count }</span>
-    </IntervalContainer>
+    <Container
+      w={'75%'}
+      minH={'300px'}
+      border={'5px dashed #000000'}
+      textAlign={'center'}
+      p={4}
+    >
+      <Heading mt={8}>{ count }</Heading>
+    </Container>
   )
 }
 

@@ -1,0 +1,72 @@
+import { extendTheme } from "@chakra-ui/react";
+
+const theme = extendTheme({
+  initialColorMode: "dark",
+  useSystemColorMode: false,
+  colors: {
+    brand: {
+      wisteria: {
+        DEFAULT: '#c4a8e3',
+        100: '#26133b',
+        200: '#4c2677',
+        300: '#723ab2',
+        400: '#9a6bcf',
+        500: '#c4a8e3',
+        600: '#ceb8e8',
+        700: '#dbcaee',
+        800: '#e7dcf4',
+        900: '#f3edf9',
+      },
+      tea_green: {
+        DEFAULT: '#e8ffb7',
+        100: '#3c5800',
+        200: '#78af00',
+        300: '#b1ff08',
+        400: '#cdff60',
+        500: '#e8ffb7',
+        600: '#edffc6',
+        700: '#f1ffd4',
+        800: '#f6ffe2',
+        900: '#fafff1',
+      },
+      aquamarine: {
+        DEFAULT: '#b7ffd8',
+        100: '#005827',
+        200: '#00af4f',
+        300: '#08ff77',
+        400: '#60ffa7',
+        500: '#b7ffd8',
+        600: '#c6ffe0',
+        700: '#d4ffe7',
+        800: '#e2ffef',
+        900: '#f1fff7',
+      },
+      outer_space: {
+        DEFAULT: '#4c5760',
+        100: '#0f1213',
+        200: '#1f2327',
+        300: '#2e353a',
+        400: '#3d464e',
+        500: '#4c5760',
+        600: '#6a7a87',
+        700: '#8e9ba6',
+        800: '#b4bcc4',
+        900: '#d9dee1',
+      },
+      old_rose: {
+        DEFAULT: '#c17767',
+        100: '#2a1611',
+        200: '#542b22',
+        300: '#7e4133',
+        400: '#a85745',
+        500: '#c17767',
+        600: '#cd9385',
+        700: '#daaea4',
+        800: '#e6c9c2',
+        900: '#f3e4e1',
+      },
+    },
+  },
+});
+
+export default theme;

@@ -1,8 +1,6 @@
 import React from "react";
 
-import { IntervalContainerExtend } from "./layouts/intervalContainer";
-
-import TextField from '@mui/material/TextField';
+import { Container, FormControl, FormLabel, Heading, Input } from "@chakra-ui/react";
 
 
 class DynamicIntervalInClass extends React.Component {
@@ -35,19 +33,23 @@ class DynamicIntervalInClass extends React.Component {
 
   render() {
     return (
-      <IntervalContainerExtend>
-        <h5>Dynamic Interval (Class)</h5>
-        <span>{ this.state.count }</span>
-        <div>
-          <TextField 
-            label="Configure interval"
-            margin="dense"
-            size="small"
+      <Container
+        w={'75%'}
+        minH={'300px'}
+        border={'5px dashed #000000'}
+        textAlign={'center'}
+        p={4}
+      >
+        <FormControl>
+          <FormLabel>Adjustment</FormLabel>
+          <Input
+            size='sm'
             value={ this.state.delay }
             onChange={ this.handleDelayChange }
           />
-        </div>
-      </IntervalContainerExtend>
+        </FormControl>
+        <Heading mt={8}>{ this.state.count }</Heading>
+      </Container>
     );
   }
 }

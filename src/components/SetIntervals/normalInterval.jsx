@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
-import { IntervalContainer } from './layouts/intervalContainer';
+import { Container, Heading } from '@chakra-ui/react';
 
 
 /**
@@ -8,8 +8,8 @@ import { IntervalContainer } from './layouts/intervalContainer';
  * ...我們將 count 的最新值保存到 ref 的 current 屬性裡...
  * ...結合第一條思路修改代碼如下：
  */
-const NormalInterval = ({ initCount }) => {
-  const [count, setCount] = useState( initCount );
+const NormalInterval = () => {
+  const [count, setCount] = useState( 10 );
   const latestCount = useRef(count); // 定義一個ref, 初始值是10
 
   useEffect( () => {
@@ -31,10 +31,15 @@ const NormalInterval = ({ initCount }) => {
   }, [])
 
   return (
-    <IntervalContainer>
-      <h5>Normal Interval</h5>
-      <span>{ count }</span>
-    </IntervalContainer>
+    <Container
+      w={'75%'}
+      minH={'300px'}
+      border={'5px dashed #000000'}
+      textAlign={'center'}
+      p={4}
+    >
+      <Heading mt={8}>{ count }</Heading>
+    </Container>
   )
 }
 

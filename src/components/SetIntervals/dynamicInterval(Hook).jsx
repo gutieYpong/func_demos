@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Container, FormControl, FormLabel, Heading, Input } from "@chakra-ui/react";
 
 import useInterval from "./hooks/useInterval";
-import { IntervalContainerExtend } from "./layouts/intervalContainer";
-
-import TextField from '@mui/material/TextField';
 
 
 const DynamicIntervalUseHook = () => {
@@ -20,19 +18,23 @@ const DynamicIntervalUseHook = () => {
   }
 
   return (
-    <IntervalContainerExtend>
-      <h5>Dynamic Interval<br/>(Custom Hook)</h5>
-      <span>{ count }</span>
-      <div>
-        <TextField 
-          label="Configure interval"
-          margin="dense"
-          size="small"
+    <Container
+      w={'75%'}
+      minH={'300px'}
+      border={'5px dashed #000000'}
+      textAlign={'center'}
+      p={4}
+    >
+      <FormControl>
+        <FormLabel>Adjustment</FormLabel>
+        <Input
+          size='sm'
           value={ delay }
           onChange={ handleDelayChange }
         />
-      </div>
-    </IntervalContainerExtend>
+      </FormControl>
+      <Heading mt={8}>{ count }</Heading>
+    </Container>
   );
 }
 
